@@ -1,0 +1,74 @@
+$default-border: solid 1px black;
+$tab-width: 1000px;
+$main-table-header-width: 100px;
+$main-table-data-width: 200px;
+$main-table-width: 350px;
+
+object {
+	overflow:hidden;
+}
+
+.menu {
+	background-color: black;
+	padding: 5px;
+	text: {
+		size: 14px;
+	}
+	a {
+		color: white;
+		margin: 5px;
+		text-decoration:none;
+	}
+}
+
+.left {
+	margin: {
+		left: 5%;
+	}
+}
+
+article {
+	margin: {
+		top: 5px;
+	}
+}
+
+header {
+	padding: {
+		top: 10px;
+		bottom: 5px;
+	}
+	font: {
+		size: 48px;
+	}
+}
+
+.spacer10 {
+	margin: 5px;
+	padding: 5px;
+}
+
+.tlc {
+	float: left;
+	text-align: right;
+	width: $main-table-header-width;
+	padding: 5px;
+} 
+.trc {
+	float: right;
+	text-align: left;
+	width: $main-table-data-width;
+	padding: 5px;
+}
+.trow {
+	clear: both;
+	width: $main-table-width;
+}
+
+.contact-section {
+	width: $tab-width;
+}
+
+#tabs {
+width: $tab-width;
+}
