@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>  
+<html lang="en">
+<head> 
+<title>Atex Norge</title>
+	<link href="styles/gridset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/sass_styles.css" />
+    <link rel="stylesheet" href="styles/jquery-ui-1.10.1.custom.css" />
+	<script src="js/gridset-overlay.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/templates.js"></script>
+	<script type="text/javascript" src="plugins/html5gallery/html5gallery.js"></script>
+	<script type="text/javascript" src="plugins/slidesjs/slides.min.jquery.js"></script>
+
+	<script>
+		function goContact() {
+			console.log('going contact...');
+			$('#content').load('content/contact.html');
+		}
+		function home() {
+			console.log('going home...');
+			$('#content').load('content/home.html');
+		} 
+		function gallery() {
+			console.log('going gallery...');
+			$('#content').load('content/gallery.html');
+		} 
+		function productCatalog() {
+			console.log('going product catalog...');
+			$('#content').load('content/product_catalog.html');
+		} 
+		
+		var that = this;
+        $(document).ready(function () {
+			console.log('document ready...');
+            that.home();   
+     		$("#slides").slides({
+				pagination: false,
+				generatePagination: false,
+				play: 3000
+			});
+        });
+    </script>
+   
+</head> 
+
+<body>
+<header class="d2-d5 mainheader" logo><img src="images/logo_atex.jpg" border="0" height="53px" width="134px"></header>	
+
+<div class="d-all spacer-10"></div>
+
+<!--
+<section class="d-all mainimage">
+<img src="images/domracheva.jpg" border="0">	
+</section>
+-->
+<div id="slides">
+		<div class="d2-d5 slides_container">
+			<div>
+				<img src="images/domracheva.jpg">
+			</div>
+			<div>
+				<img src="images/overtrekksbukse.jpg">
+			</div>
+		</div>
+</div>
+
+<section class="d-all menu">
+	<a onclick="home()" href="#">Hjem</a>
+	<a onclick="home()" href="#">Klubber</a>
+	<a onclick="productCatalog()" href="#">Produktkatalog</a>
+	<a onclick="home()" href="#">Langrenn</a>
+	<a onclick="home()" href="#">Skiskyting</a>
+	<a onclick="home()" href="#">Fritid</a>
+	<a onclick="gallery()" href="#">Galleri</a>
+	<a onclick="goContact()" href="#">Kontakt</a>
+</section>
+<div class="d-all limebar"></div>
+
+<div class="d-all spacer-10"></div>
+
+<section id="content" class="content">
+</section>	
+<div class="d-all spacer-200"></div>
+	
+</body>
+</html>
