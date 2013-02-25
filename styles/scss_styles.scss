@@ -1,37 +1,29 @@
+@mixin rounded($vert, $horz, $radius: 10px) {
+  border-#{$vert}-#{$horz}-radius: $radius;
+  -moz-border-radius-#{$vert}#{$horz}: $radius;
+  -webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+@mixin rounded-corners {
+	@include rounded(top, left);
+	@include rounded(top, right);
+	@include rounded(bottom, left);
+	@include rounded(bottom, right);
+}
+
+	
 article {
   &.image figure {
     text-align: left;
     margin-left: 10px;
     img {
-      border-top-left-radius: 0px;
-      -moz-border-radius-topleft: 0px;
-      -webkit-border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      -moz-border-radius-topright: 0px;
-      -webkit-border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      -moz-border-radius-bottomleft: 0px;
-      -webkit-border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-      -moz-border-radius-bottomright: 0px;
-      -webkit-border-bottom-right-radius: 0px;
+      @include rounded-corners;
       max-width: 180px;
     }
   }
   &.info {
     clear: none;
-    border-top-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -webkit-border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
-    -webkit-border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    -moz-border-radius-bottomleft: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    -moz-border-radius-bottomright: 0px;
-    -webkit-border-bottom-right-radius: 0px;
+    @include rounded-corners;
     font-family: Trebuchet MS;
     border-color: gray;
     border-width: 1px;
@@ -53,18 +45,7 @@ article {
   }
   &.promotion {
     clear: none;
-    border-top-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -webkit-border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
-    -webkit-border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    -moz-border-radius-bottomleft: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    -moz-border-radius-bottomright: 0px;
-    -webkit-border-bottom-right-radius: 0px;
+    @include rounded-corners;
     font-family: Trebuchet MS;
     border-color: gray;
     border-width: 1px;
@@ -105,18 +86,7 @@ article {
       margin: 10px;
       background-color: #f1eaea;
       padding: 5px;
-      border-top-left-radius: 0px;
-      -moz-border-radius-topleft: 0px;
-      -webkit-border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      -moz-border-radius-topright: 0px;
-      -webkit-border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      -moz-border-radius-bottomleft: 0px;
-      -webkit-border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-      -moz-border-radius-bottomright: 0px;
-      -webkit-border-bottom-right-radius: 0px;
+      @include rounded-corners;
     }
   }
 }
